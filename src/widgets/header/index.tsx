@@ -1,3 +1,5 @@
+const navLinks = ['About', 'Contact']
+
 export const Header = () => {
   return (
     <header className="py-2">
@@ -5,11 +7,16 @@ export const Header = () => {
         <h1 className="text-4xl font-bold capitalize">sneakers</h1>
         <nav>
           <ul className="flex items-center gap-2">
-            <li>About</li>
-            <li>Contact</li>
-            <li>
-              <button>use template</button>
-            </li>
+            <>
+              {navLinks.map((link) => (
+                <li key={link} className="text-secondary">
+                  {link}
+                </li>
+              ))}
+              <li>
+                <button>use template</button>
+              </li>
+            </>
           </ul>
         </nav>
       </div>
