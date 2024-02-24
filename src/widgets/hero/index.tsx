@@ -1,10 +1,19 @@
+import { OrbitControls, Stage } from '@react-three/drei'
+import { Canvas } from '@react-three/fiber'
 import { Button } from '../../shared/ui/button'
+import { SneakersScene } from './ui/sneakers-scene'
 
 export const Hero = () => {
   return (
     <div className="h-dvh relative">
       <div className="container mx-auto h-full flex flex-col items-center justify-center">
-        <h2 className="text-9xl font-bold capitalize">stan smith</h2>
+        <h2 className="absolute top-24 text-9xl font-bold capitalize">stan smith</h2>
+        <Canvas className="absolute top-0">
+          <Stage>
+            <SneakersScene />
+          </Stage>
+          <OrbitControls enableZoom={false} />
+        </Canvas>
         <div className="absolute bottom-5 max-w-96 flex flex-col justify-center items-center text-center gap-4">
           <h3 className="text-4xl font-bold capitalize">Adidas Original Stan Smith Winter 2022</h3>
           <p className="text-secondary">
