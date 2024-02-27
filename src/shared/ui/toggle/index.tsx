@@ -2,12 +2,14 @@ import clsx from 'clsx'
 import { motion } from 'framer-motion'
 import { useEffect, useRef, useState } from 'react'
 
-export const Toggle = () => {
-  const sliderRef = useRef<HTMLDivElement>(null)
-  const circleRef = useRef<HTMLDivElement>(null)
-  const [sliderWidth, setSliderWidth] = useState<number | null>(null)
+interface Props {
+  isToggled: boolean
+  setIsToggled: (isToggled: boolean) => void
+}
 
-  const [isToggled, setIsToggled] = useState(true)
+export const Toggle = ({ isToggled, setIsToggled }: Props) => {
+  const sliderRef = useRef<HTMLDivElement>(null)
+  const [sliderWidth, setSliderWidth] = useState<number | null>(null)
 
   useEffect(() => {
     if (sliderRef.current) {
@@ -26,7 +28,6 @@ export const Toggle = () => {
       onClick={handleToggle}
       animate={{ background: isToggled ? '#000' : '#fff' }}>
       <motion.div
-        ref={circleRef}
         className={clsx('w-11 h-11 rounded-full shadow-md', {
           'bg-white': isToggled,
           'bg-black': !isToggled,
