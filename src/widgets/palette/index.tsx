@@ -1,12 +1,15 @@
+import { Stage } from '@react-three/drei'
+import { Canvas } from '@react-three/fiber'
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 import { Toggle } from '../../shared/ui/toggle'
+import { SneakersScene } from './ui/sneakers-scene'
 
 export const Palette = () => {
   const [isToggled, setIsToggled] = useState(true)
 
   return (
-    <div className="h-dvh">
+    <div className="relative h-dvh">
       <div className="container mx-auto h-full flex flex-col items-center justify-center">
         <div className="max-w-96 flex flex-col text-center gap-4">
           <h3 className="text-4xl font-bold capitalize">Avaible in 2 colors</h3>
@@ -15,6 +18,15 @@ export const Palette = () => {
             styles is back in a whole new way!
           </p>
         </div>
+        <Canvas
+          style={{
+            width: '800px',
+            height: '400px',
+          }}>
+          <Stage>
+            <SneakersScene isToggled={isToggled} />
+          </Stage>
+        </Canvas>
         <div className="flex justify-center items-center text-center gap-4">
           <motion.span
             className="text-xl font-bold capitalize"
