@@ -12,7 +12,12 @@ export const Hero = () => {
           <Stage>
             <SneakersScene />
           </Stage>
-          <OrbitControls enableZoom={false} />
+          <OrbitControls
+            minPolarAngle={Math.PI / 2}
+            maxPolarAngle={Math.PI / 2}
+            enableZoom={false}
+            enablePan={false}
+          />
         </Canvas>
         <div className="absolute bottom-5 max-w-96 flex flex-col justify-center items-center text-center gap-4">
           <h3 className="text-4xl font-bold capitalize">Adidas Original Stan Smith Winter 2022</h3>
