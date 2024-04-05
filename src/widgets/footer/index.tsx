@@ -51,9 +51,9 @@ interface Link {
 export const Footer = () => {
   return (
     <footer className="bg-black text-white">
-      <div className="container mx-auto flex items-center justify-between py-12 px-8">
+      <div className="container mx-auto flex items-center justify-between py-12 px-8 max-lg:flex-col max-lg:gap-10">
         <div className="flex flex-col gap-2">
-          <h2 className="text-3xl font-bold">Sneakers</h2>
+          <h2 className="text-3xl font-bold max-lg:text-center">Sneakers</h2>
           <p className="text-secondary">
             Made this &#128076; by{' '}
             <a href="https://github.com/DenisEgorov200" className="text-white underline">
@@ -61,9 +61,9 @@ export const Footer = () => {
             </a>
           </p>
         </div>
-        <div className="flex items-center gap-16">
+        <div className="flex items-center gap-16 max-sm:w-full max-sm:flex-col max-sm:gap-2">
           {FOOTER_MOCK.map((links) => (
-            <div key={links.id}>
+            <div key={links.id} className="max-sm:w-full max-sm:text-center">
               <h3 className="text-lg font-bold uppercase mb-4">{links.title}</h3>
               <ul className="flex flex-col gap-2">
                 {links.children.map((link) => (
