@@ -8,6 +8,8 @@ interface Props {
 export const SneakersScene = ({ isToggled }: Props) => {
   const { nodes, materials } = useGLTF('/models/sneaker/scene.gltf')
 
+  console.log(nodes)
+
   return (
     <motion.mesh
       geometry={nodes.Object_4.geometry}
