@@ -1,8 +1,8 @@
 import { Stage } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
+import { Toggle } from '@shared/ui/toggle'
 import { motion } from 'framer-motion'
 import { useState } from 'react'
-import { Toggle } from '../../shared/ui/toggle'
 import { SneakersScene } from './ui/sneakers-scene'
 
 export const Palette = () => {

@@ -24,7 +24,7 @@ export const Toggle = ({ isToggled, setIsToggled }: Props) => {
   return (
     <motion.div
       ref={sliderRef}
-      className="w-48 h-16 rounded-full flex items-center p-1 cursor-pointer"
+      className="w-48 h-13 rounded-full flex items-center p-1 cursor-pointer"
       onClick={handleToggle}
       animate={{ background: isToggled ? '#000' : '#fff' }}>
       <motion.div
