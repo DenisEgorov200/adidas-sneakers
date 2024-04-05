@@ -20,7 +20,7 @@ export const Palette = () => {
         </div>
         <Canvas
           style={{
-            width: '800px',
+            width: '1200px',
             height: '400px',
           }}>
           <Stage>
