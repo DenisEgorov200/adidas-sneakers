@@ -1,8 +1,8 @@
 import { OrbitControls, Stage } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
+import { Button } from '@shared/ui/button'
 import { Loading } from '@shared/ui/loading'
 import { Suspense } from 'react'
-import { Button } from '../../shared/ui/button'
 import { SneakersScene } from './ui/sneakers-scene'
 
 export const Hero = () => {
