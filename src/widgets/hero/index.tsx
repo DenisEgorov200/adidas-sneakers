@@ -9,7 +9,9 @@ export const Hero = () => {
   return (
     <div className="h-dvh relative">
       <div className="container mx-auto h-full flex flex-col items-center justify-center">
-        <h1 className="absolute top-24 text-9xl font-bold capitalize">stan smith</h1>
+        <h1 className="absolute top-24 text-9xl font-bold capitalize max-sm:text-center">
+          stan smith
+        </h1>
         <Suspense fallback={null}>
           <Canvas className="absolute top-0">
             <Stage>
